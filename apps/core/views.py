@@ -29,7 +29,7 @@ class UpdateView(ClientMixin, UpdateView):
 
 
 class DeleteView(ClientMixin, DeleteView):
-    success_url = reverse_lazy('home_view')
+    success_url = reverse_lazy('core:home_view')
   
 
 class DetailView(ClientMixin, DetailView):
