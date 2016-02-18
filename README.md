@@ -3,21 +3,41 @@
 
 Este nada  mais é que um simples crud feito em django com sass e bootstrap.
 
+
+### Uso
+
+**requerimentos:**
+
+- Django
+
+
+Instale o requirements.txt:
+
+    pip install -r requirements.txt
+
+rode o projeto:
+
+    make migrate && make load && make run    
+
+
+### Dev. Uso (sass e gulp)
+
 **requerimentos:**
 
 - Django
 - gulp
 - sass
 
-Instale as dependencias e rode o requirements.txt:
+
+Instale o gulp e o sass, logo após instale o requirements.txt:
 
     pip install -r requirements.txt
 
-rode o gulp:
+inicie o gulp:
 
     gulp
 
-rode o projeto:
+inicie o projeto:
 
     make migrate && make load && make run
 
