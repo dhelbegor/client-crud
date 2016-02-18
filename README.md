@@ -3,7 +3,8 @@
 
 Este nada  mais é que um simples crud feito em django com sass e bootstrap.
 
-**requerimentos**
+**requerimentos:**
+
 Django
 gulp
 sass
@@ -29,5 +30,6 @@ make migrate && make load && make run
 para acesso ao admin use:
 
 usuario: admin
+
 senha: crudadmin
 
