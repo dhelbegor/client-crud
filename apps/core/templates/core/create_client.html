@@ -1,42 +1,37 @@
+{% extends 'base.html' %}
+{% load custom_class %}
+
+
+
+{% block content %}
+{{ form.non_field_errors }}
+<div class="container">
+    <div class="cont-area">
+        <div class="form-area">
             <form method="post">
-                <p><label for="first_name">Nome:</label> <input id="first_name" maxlength="100" name="first_name" type="text" /></p>
-                <p><label for="last_name">Sobre nome:</label> <input id="last_name" maxlength="100" name="last_name" type="text" /></p>
-                <p><label for="phone">Telefone:</label> <input id="phone" maxlength="11" name="phone" type="text" /></p>
-                <p><label for="cell">Celular:</label> <input id="cell" maxlength="12" name="cell" type="text" /></p>
-                <p><label for="address">Endereço:</label> <input id="address" maxlength="200" name="address" type="text" /></p>
-                <p><label for="city">Cidade:</label> <input id="city" maxlength="150" name="city" type="text" /></p>
-                <p><label for="zip_code">Codigo postal:</label> <input id="zip_code" maxlength="30" name="zip_code" type="text" /></p>
-                <p><label for="state">Estado:</label> 
-                <select id="state" name="state">
-                    <option value="" selected="selected">---------</option>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Brasília</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="PR">Paraná</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="TO">Tocantins</option>
-                </select></p>
-                <p><label for="cpf">Cpf:</label> <input id="cpf" maxlength="11" name="cpf" type="text" /></p>
-                <input type="submit" value="Salvar" />
+                {% csrf_token %}
+                <p>Nome</p>
+                {{ form.first_name|class:'form-controls' }}
+                <p>Sobrenome</p>
+                {{ form.last_name|class:'form-controls' }}
+                <p>CPF</p>
+                {{ form.cpf|class:'form-controls' }}
+                <p>Telefone</p>
+                {{ form.phone|class:'form-controls' }}
+                <p>Celular</p>
+                {{ form.cell|class:'form-controls' }}
+                <p>Endereço</p>
+                {{ form.address|class:'form-controls' }}
+                <p>Cidade</p>
+                {{ form.city|class:'form-controls' }}
+                <p>CEP</p>
+                {{ form.zip_code|class:'form-controls' }}
+                <p>Estado</p>
+                {{ form.state|class:'form-controls' }}
+
+                <input class="btns btn-styl btn-font edit-save" type="submit" value="Salvar" />
             </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
