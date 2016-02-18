@@ -1,0 +1,28 @@
+{
+  "name": "client-crud",
+  "authors": [
+    "dhelbegor <dhelbegors@gmail.com>"
+  ],
+  "description": "simples crud feito com django, sass e bootstrap",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "django",
+    "crud",
+    "sass",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "apps/core/static/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6"
+  }
+}

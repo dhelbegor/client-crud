@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load easy_mask %}
+
+{% block title %}
+    <title>client-crud | bem vindo</title>
+{% endblock title %}
+
+    <div class="container">
+        <div class="list-text">
+            <h1>Lista de Clientes</h1>
+        </div>
+    </div>
+
+{% block content %}
+
+<div class="container">
+    <div class="tab"> 
+        <table class="table-styl">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Tel. Fixo</th>
+                    <th>Tel. Celular</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for client in clients %}
+                <tr>
+                    <td>{{ client.full_name | title }}</td>
+                    <td>{{ client.cpf | cpf }}</td>
+                    <td>{{ client.phone | phone }}</td>
+                    <td>{{ client.cell | phone }}</td>
+                    <td><a class='btns btn-styl' href="{% url 'core:detail_view' pk=client.id %}"><span class="icons primary-button"></span> Detail</a> <a class='btns btn-styl' href="{% url 'core:edit_view' client.id %}"><span class="icons secundary-button"></span> Edit</a> <a href="{% url 'core:delete_view' client.id %}" class="btns alt-btn-styl"><span class="icons alt-button"></span> Del</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}

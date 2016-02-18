@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load custom_class %}
+
+{% block content %}
+{{ form.non_field_errors }}
+<div class="container">
+    <div class="cont-area">
+        <div class="form-area">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.first_name|class:'form-controls' }}
+                {{ form.last_name|class:'form-controls' }}
+                {{ form.cpf|class:'form-controls' }}
+                {{ form.phone|class:'form-controls' }}
+                {{ form.cell|class:'form-controls' }}
+                {{ form.address|class:'form-controls' }}
+                {{ form.city|class:'form-controls' }}
+                {{ form.zip_code|class:'form-controls' }}
+                {{ form.state|class:'form-controls' }}
+
+                <input class="btns btn-styl btn-font edit-save" type="submit" value="Salvar" />
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

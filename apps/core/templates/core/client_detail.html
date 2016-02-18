@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load easy_mask %}
+{% block title %}
+        <title>client detail</title>
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <div class="rows">
+        <div class="detail-text">
+            <h1>Detalhes do cliente</h1>  
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="rows">
+        <div class="details">
+            <div class="well">
+                <div class="well-main">
+                    <h2>{{ object.full_name }}</h2>
+                    <p><strong>CPF: </strong> {{ object.cpf | cpf }}</p>
+                    <p><strong>Tel. Fixo: </strong> {{ object.phone | phone }}</p>
+                    <p><strong>Tel. Celular: </strong> {{ object.cell | phone }}</p>
+                    <p><strong>Endereço: </strong> {{ object.address }}</p>
+                    <p><strong>Cidade: </strong> {{ object.city }}</p>
+                    <p><strong>Estado: </strong> {{ object.state }}</p>
+                </div>
+            </div>
+            <div class="btn-detail">
+                <a class="btns btn-styl btn-font" href="{% url 'core:edit_view' client.id %}"><span class="icons primary-button"></span> Editar</a>
+                <a class="btns btn-styl btn-font" href="{% url 'core:home_view' %}"><span class="icons primary-button"></span> Voltar</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock content %}

@@ -1,0 +1,47 @@
+{% block title %}
+    <title>client-crud | delete </title>
+{% endblock title %}
+
+<style type="text/css">
+    .main{
+        bottom: 50%;
+        position: fixed;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    .button{
+        background: #0870E3;
+        padding: 8px 10px 8px 20px;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+        box-shadow: 3px 3px 2px #ccc;
+        border-radius: 10px;
+        text-decoration: none
+    } 
+    input{
+        background: #0870E3;
+        padding: 8px 10px 8px 20px;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+        box-shadow: 3px 3px 2px #ccc;
+        border-radius: 10px;
+        cursor: hand;
+        text-decoration: none;
+    }
+</style>
+
+{% block content %}
+<div class="container">
+    <div class="main">
+        <form method="post">
+            {% csrf_token %}
+                tem certeza que deseja deletar o cliente: <strong>{{ object }}</strong> ?
+            <input type="submit" value="Sim" />
+            <a class='button' href="{% url 'core:home_view' %}"> Não</a>
+        </form>
+    </div>
+</div>
+{% endblock content %}

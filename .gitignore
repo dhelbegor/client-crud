@@ -1,0 +1,12 @@
+__pycache__/
+bin/
+include/
+lib/
+.venv/
+vendor/
+node_modules/
+
+*~
+*.sqlite3
+*.db
+*.pyc
