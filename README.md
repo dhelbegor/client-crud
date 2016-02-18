@@ -11,21 +11,15 @@ sass
 
 Instale as dependencias e rode o requirements.txt:
 
-    ```bash
     pip install -r requirements.txt
-    ```
 
 rode o gulp:
 
-    ```bash
     gulp
-    ```
 
 rode o projeto:
 
-    ```bash
     make migrate && make load && make run
-    ```
 
 para acesso ao admin use:
 
