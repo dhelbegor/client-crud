@@ -7,7 +7,7 @@ Este nada  mais é que um simples crud feito em django com sass e bootstrap.
 
 - Django
 - gulp
-sass
+- sass
 
 Instale as dependencias e rode o requirements.txt:
 
